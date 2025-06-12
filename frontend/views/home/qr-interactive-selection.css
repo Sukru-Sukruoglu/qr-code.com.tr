@@ -1,0 +1,429 @@
+/* İnteraktif QR Seçim Bölümü */
+.interactive-qr-selection {
+    padding: 6rem 0;
+    background: #ffffff;
+    border-top: 1px solid #f3f4f6;
+}
+
+.qr-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.qr-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.qr-header h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.qr-header h1 .green-text {
+    color: #4CAF50;
+}
+
+.qr-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.qr-main-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.qr-left-section {
+    flex: 1;
+    max-width: 500px;
+}
+
+.qr-phone-mockup {
+    background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.qr-phone-mockup::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 200px;
+    height: 200px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 50%;
+}
+
+.qr-phone-screen {
+    background: #667eea;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.qr-url-bar {
+    background: rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 8px 12px;
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.qr-phone-content {
+    background: white;
+    border-radius: 10px;
+    height: 200px;
+    padding: 15px;
+    position: relative;
+}
+
+.qr-phone-content::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 6px;
+}
+
+.qr-phone-content::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 80px;
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.qr-section-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.qr-section-description {
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.qr-create-button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.qr-create-button:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.qr-create-button::before {
+    content: '⊞';
+    font-size: 1.1rem;
+}
+
+.qr-right-section {
+    flex: 1;
+}
+
+.qr-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.qr-option {
+    background: white;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.qr-option:hover {
+    border-color: #4CAF50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.qr-option.selected {
+    border-color: #4CAF50;
+    background: #f8fff8;
+}
+
+.qr-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.qr-option.selected .qr-icon {
+    color: #4CAF50;
+}
+
+.qr-label {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.qr-option.selected .qr-label {
+    color: #4CAF50;
+}
+
+/* Specific icons for each option */
+.icon-vcard::before { content: '👤'; }
+.icon-website::before { content: '🌐'; }
+.icon-pdf::before { content: '📄'; }
+.icon-images::before { content: '🖼️'; }
+.icon-video::before { content: '▶️'; }
+.icon-wifi::before { content: '📶'; }
+.icon-menu::before { content: '📋'; }
+.icon-business::before { content: '🏢'; }
+.icon-music::before { content: '🎵'; }
+.icon-apps::before { content: '📱'; }
+.icon-links::before { content: '🔗'; }
+.icon-coupon::before { content: '🎫'; }
+.icon-facebook::before { content: '📘'; }
+.icon-whatsapp::before { content: '💬'; }
+.icon-social::before { content: '👥'; }
+.icon-instagram::before { content: '📷'; }
+
+@media (max-width: 768px) {
+    .qr-main-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .qr-options {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .qr-header h1 {
+        font-size: 2rem;
+    }
+    
+    .qr-container {
+        padding: 40px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* filepath: c:\xampp\htdocs\dashboard\qr-code.com.tr\frontend\views\home\qr-interactive-selection.js */
+
+// QR seçenekleri verileri
+const qrOptionsData = {
+    'vcard': {
+        title: 'vCard',
+        description: 'vCard\'lar sanal kartvizitlerdir ve bunları bir QR koduna bağlamak, e-posta adresinizi, iş unvanınızı, şirket adınızı ve daha fazlasını paylaşmanızı son derece kolaylaştırır. İstediğiniz zaman güncelleyebilir ve bilgilerinizi anında yeni bağlantılarla paylaşabilirsiniz.'
+    },
+    'website': {
+        title: 'İnternet sitesi',
+        description: 'URL\'sini bir QR koduna bağlayarak bir web sitesinin veya web sayfasının trafiğini artırın. Kullanıcılar artık herhangi bir web sitesine veya web sayfasına yalnızca QR kodunu tarayarak kolayca erişebilir.'
+    },
+    'pdf': {
+        title: 'PDF',
+        description: 'İnsanların bir PDF dosyasına bakmasına mı ihtiyacınız var? QR kodu, insanlara PDF dosyalarınıza hızlı ve kolay erişim sağlamanın en uygun yoludur.'
+    },
+    'images': {
+        title: 'Görseller',
+        description: 'Artık görsel paylaşmak her zamankinden daha kolay. Ürünlerinizi ve hizmetlerinizi potansiyel müşterilere sergileyen resim galerilerini paylaşmak için QR kodunu kullanın. Fotoğraflarını kolayca vurgulamak isteyen her türden etkinlik ve işletme için mükemmeldir.'
+    },
+    'video': {
+        title: 'Video',
+        description: 'İnsanların izlemesini istediğiniz bir videoyu paylaşmak için QR kodunuzu kullanın. QR kodunuzu yazdırın veya dijital olarak paylaşın ve markanızı hayata geçirmenin bir yolu olarak kullanın.'
+    },
+    'wifi': {
+        title: 'WiFi',
+        description: 'Wi-Fi erişiminizi bir QR koduyla hızla paylaşın. Herkesin cep telefonuyla tarayarak bağlanmasını kolaylaştırın.'
+    },
+    'menu': {
+        title: 'Menü',
+        description: 'Restoran veya barınız varsa bu QR kodu tam size göre. Dakikalar içinde mükemmel menüyü oluşturun ve istediğiniz zaman değişiklik yapın! Artık menünüzü değiştirdiğinizde yeniden yazdırmak için zaman harcamanıza gerek yok.'
+    },
+    'business': {
+        title: 'İşletme',
+        description: 'Çalışma saatleri, konum, iletişim bilgileri ve potansiyel müşterilerin ilgisini çekebilecek diğer bilgiler dahil olmak üzere iş bilgilerinizi herkesle zahmetsizce paylaşmak için QR kodunuzu kullanın.'
+    },
+    'music': {
+        title: 'MP3',
+        description: 'QR kodlarınızı dünyanın duymasını istediğiniz ses dosyalarına bağlayarak müzik, podcast ve diğer sesleri kolayca paylaşın.'
+    },
+    'apps': {
+        title: 'Uygulamalar',
+        description: 'Sadece QR kodunuzu tarayarak herkes uygulamanızı hemen indirebilir. Markanıza uygun hale getirmek ve daha fazla müşteri çekmek için özelleştirilebilir QR kodlarımızdan yararlanın.'
+    },
+    'links': {
+        title: 'Bağlantıların Listesi',
+        description: 'Profillerinizi bir QR kodu aracılığıyla birbirine bağlayarak sosyal medyadaki varlığınızı büyütün ve insanların size ulaşıp sizi takip etmesini kolaylaştırın.'
+    },
+    'coupon': {
+        title: 'Kupon',
+        description: 'Kupon QR kodları, yeni müşteriler çekmenin ve en sadık müşterilerinizi indirim kuponları/kodlarıyla ödüllendirmenin en iyi yoludur. Bu tür QR koduyla satışları artırın, tekrarlı işler oluşturun ve müşteri sadakati oluşturun.'
+    },
+    'facebook': {
+        title: 'Facebook',
+        description: 'Kullanıcıları sayfanız veya işletmeniz hakkında bilgilerle dolu özel bir açılış sayfasına yönlendiren bir QR kodu kullanarak Facebook beğenilerinizi artırın. Ziyaretçiler buradan tek tıklamayla Facebook sayfanızı kolayca "Beğenebilir". Erişiminizi genişletmenin ve daha fazla kişiyle bağlantı kurmanın akıllı ve etkili bir yolu!'
+    },
+    'whatsapp': {
+        title: 'WhatsApp',
+        description: 'WhatsApp telefon numaranızı QR kodunuzu tarayan herkesle hızlı ve güvenli şekilde paylaşın. Ayrıca önceden doldurulmuş bir mesaj da ekleyebilirsiniz. İş ağı, müşteri hizmetleri veya kişisel kullanım için idealdir.'
+    },
+    'social': {
+        title: 'Sosyal medya',
+        description: 'QR kodunuzu hızlı ve kolay bir şekilde tarayarak kullanıcıların göz açıp kapayıncaya kadar erişebileceği tüm sosyal medya bağlantılarınızın bir listesini oluşturun.'
+    },
+    'instagram': {
+        title: 'Instagram',
+        description: 'İşletmeniz veya kişisel Instagram hesabınız için daha fazla etkileşim mi istiyorsunuz? Sadece bir Instagram QR kodu oluşturun ve takipçi sayınızın yükselişini izleyin!'
+    }
+};
+
+let selectedQROption = 'website';
+
+// Hover ile içerik güncelleme
+function updateQRContent(optionKey) {
+    const option = qrOptionsData[optionKey];
+    if (option) {
+        document.querySelector('.qr-section-title').textContent = option.title;
+        document.querySelector('.qr-section-description').textContent = option.description;
+        
+        // Telefon ekranı renk değişimi
+        const phoneScreen = document.querySelector('.qr-phone-screen');
+        const colors = {
+            'vcard': '#1f2937',
+            'website': '#667eea',
+            'pdf': '#ef4444',
+            'images': '#8b5cf6',
+            'video': '#f59e0b',
+            'wifi': '#10b981',
+            'menu': '#f97316',
+            'business': '#6366f1',
+            'music': '#ec4899',
+            'apps': '#06b6d4',
+            'links': '#8b5cf6',
+            'coupon': '#f59e0b',
+            'facebook': '#1877f2',
+            'whatsapp': '#25d366',
+            'social': '#ec4899',
+            'instagram': '#e4405f'
+        };
+        
+        if (phoneScreen && colors[optionKey]) {
+            phoneScreen.style.background = colors[optionKey];
+        }
+    }
+}
+
+// Seçili seçeneğe geri dönme
+function resetToSelectedQR() {
+    const option = qrOptionsData[selectedQROption];
+    if (option) {
+        document.querySelector('.qr-section-title').textContent = option.title;
+        document.querySelector('.qr-section-description').textContent = option.description;
+        
+        // Telefon ekranını seçili renge geri döndür
+        const phoneScreen = document.querySelector('.qr-phone-screen');
+        const colors = {
+            'vcard': '#1f2937',
+            'website': '#667eea',
+            'pdf': '#ef4444',
+            'images': '#8b5cf6',
+            'video': '#f59e0b',
+            'wifi': '#10b981',
+            'menu': '#f97316',
+            'business': '#6366f1',
+            'music': '#ec4899',
+            'apps': '#06b6d4',
+            'links': '#8b5cf6',
+            'coupon': '#f59e0b',
+            'facebook': '#1877f2',
+            'whatsapp': '#25d366',
+            'social': '#ec4899',
+            'instagram': '#e4405f'
+        };
+        
+        if (phoneScreen && colors[selectedQROption]) {
+            phoneScreen.style.background = colors[selectedQROption];
+        }
+    }
+}
+
+// Seçenek tıklama
+function selectQROption(optionKey) {
+    selectedQROption = optionKey;
+    
+    // Remove selected class from all options
+    document.querySelectorAll('.qr-option').forEach(option => {
+        option.classList.remove('selected');
+    });
+    
+    // Add selected class to clicked option
+    event.currentTarget.classList.add('selected');
+    
+    // Update content permanently
+    updateQRContent(optionKey);
+    
+    // Update button onclick
+    document.querySelector('.qr-create-button').setAttribute('onclick', `createQRFromSelection('${optionKey}')`);
+}
+
+// QR Oluşturma
+function createQRFromSelection(type) {
+    // QR generator sayfasına yönlendir
+    if (typeof goToQRGenerator === 'function') {
+        goToQRGenerator(type);
+    } else {
+        // Fallback - basit yönlendirme
+        window.location.href = `/qr-olustur?type=${type}`;
+    }
+}

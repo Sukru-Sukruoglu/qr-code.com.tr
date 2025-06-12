@@ -1,0 +1,9 @@
+# Backend API dosyalarına izin ver
+<Files "*.php">
+    Require all granted
+</Files>
+
+# Sadece PHP dosyalarına izin ver
+<FilesMatch "\.(php)$">
+    Require all granted
+</FilesMatch>

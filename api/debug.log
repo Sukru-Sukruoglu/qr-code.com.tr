@@ -1,0 +1,137 @@
+
+2025-06-03 14:43:16 - API started
+2025-06-03 14:43:16 - Including database
+2025-06-03 14:43:16 - Database included successfully
+2025-06-03 14:43:16 - Request method: POST
+2025-06-03 14:43:16 - POST data: Array
+(
+    [first_name] => Test
+    [last_name] => Kullanıcı
+    [email] => test@test.com
+    [phone] => +90 555 123 45 67
+    [password] => Test123456
+    [confirm_password] => Test123456
+    [terms] => on
+)
+
+2025-06-03 14:43:16 - Database connection OK
+2025-06-03 14:43:16 - Form data parsed: Test, Kullanıcı, test@test.com
+2025-06-03 14:43:16 - Validation passed
+2025-06-03 14:43:16 - Email not exists, proceeding
+2025-06-03 14:43:16 - Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email_verification_code' in 'field list'
+
+2025-06-03 14:46:13 - API started
+2025-06-03 14:46:13 - Including database
+2025-06-03 14:46:13 - Database included successfully
+2025-06-03 14:46:13 - Request method: POST
+2025-06-03 14:46:13 - POST data: Array
+(
+    [first_name] => Test
+    [last_name] => Kullanıcı
+    [email] => test@test.com
+    [phone] => +90 555 123 45 67
+    [password] => Test123456
+    [confirm_password] => Test123456
+    [terms] => on
+)
+
+2025-06-03 14:46:13 - Database connection OK
+2025-06-03 14:46:13 - Form data parsed: Test, Kullanıcı, test@test.com
+2025-06-03 14:46:13 - Validation passed
+2025-06-03 14:46:13 - Email not exists, proceeding
+2025-06-03 14:46:13 - Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email_verification_code' in 'field list'
+
+2025-06-03 14:51:17 - API started
+2025-06-03 14:51:17 - Including database
+2025-06-03 14:51:17 - Database included successfully
+2025-06-03 14:51:17 - POST data: Array
+(
+    [first_name] => Test
+    [last_name] => Kullanıcı
+    [email] => test@test.com
+    [phone] => +90 555 123 45 67
+    [password] => Test123456
+    [confirm_password] => Test123456
+    [terms] => on
+)
+
+2025-06-03 14:51:17 - Database connection OK
+2025-06-03 14:51:17 - Form data parsed: Test, Kullanıcı, test@test.com
+2025-06-03 14:51:17 - Validation passed
+2025-06-03 14:51:17 - Email not exists, proceeding
+2025-06-03 14:51:17 - Generated username: test_1c55
+2025-06-03 14:51:17 - User created with ID: 1
+2025-06-03 14:51:17 - Success response sent
+
+2025-06-03 15:02:22 - API started
+2025-06-03 15:02:22 - Including database
+2025-06-03 15:02:22 - Database included successfully
+2025-06-03 15:02:22 - POST data: Array
+(
+    [first_name] => Test
+    [last_name] => Kullanıcı
+    [email] => sukru.sukruoglu@gmail.com
+    [phone] => +90 555 123 45 67
+    [password] => Test123456
+    [confirm_password] => Test123456
+    [terms] => on
+)
+
+2025-06-03 15:02:22 - Database connection OK
+2025-06-03 15:02:22 - Form data parsed: Test, Kullanıcı, sukru.sukruoglu@gmail.com
+2025-06-03 15:02:22 - Validation passed
+2025-06-03 15:02:22 - Email not exists, proceeding
+2025-06-03 15:02:22 - Generated username: sukru.sukruoglu_3697
+2025-06-03 15:02:23 - User created with ID: 2
+2025-06-03 15:02:23 - Success response sent
+
+2025-06-03 15:27:21 - API started
+2025-06-03 15:27:21 - Including database
+2025-06-03 15:27:21 - Database included successfully
+2025-06-03 15:27:21 - Wrong method
+
+2025-06-03 15:27:21 - API started
+2025-06-03 15:27:21 - Including database
+2025-06-03 15:27:21 - Database included successfully
+2025-06-03 15:27:21 - Wrong method
+
+2025-06-04 17:33:06 - API started
+2025-06-04 17:33:06 - Including database
+2025-06-04 17:33:06 - Database included successfully
+2025-06-04 17:33:06 - POST data: Array
+(
+    [first_name] => Sukru
+    [last_name] => Sukruoglu
+    [email] => sukru.sukruoglu@gmail.com
+    [phone] => +905337044504
+    [password] => 11111111
+    [confirm_password] => 11111111
+    [terms] => on
+)
+
+2025-06-04 17:33:06 - Database connection OK
+2025-06-04 17:33:06 - Form data parsed: Sukru, Sukruoglu, sukru.sukruoglu@gmail.com
+2025-06-04 17:33:06 - Validation passed
+2025-06-04 17:33:06 - Exception: Bu e-posta adresi zaten kayıtlı
+
+2025-06-04 17:33:42 - API started
+2025-06-04 17:33:42 - Including database
+2025-06-04 17:33:42 - Database included successfully
+2025-06-04 17:33:42 - POST data: Array
+(
+    [first_name] => Sukru
+    [last_name] => Sukruoglu
+    [email] => sukru.sukruoglu@gmail.com
+    [phone] => +905337044504
+    [password] => 11111111
+    [confirm_password] => 11111111
+    [terms] => on
+)
+
+2025-06-04 17:33:42 - Database connection OK
+2025-06-04 17:33:42 - Form data parsed: Sukru, Sukruoglu, sukru.sukruoglu@gmail.com
+2025-06-04 17:33:42 - Validation passed
+2025-06-04 17:33:42 - Email not exists, proceeding
+2025-06-04 17:33:42 - Generated username: sukru.sukruoglu_fa12
+2025-06-04 17:33:42 - User created with ID: 3
+2025-06-04 17:33:42 - Success response sent

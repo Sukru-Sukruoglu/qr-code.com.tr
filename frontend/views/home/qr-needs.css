@@ -1,0 +1,171 @@
+/* Yeni Görsel Stiller */
+.phone-call-visual {
+    text-align: center;
+    color: white;
+}
+
+.call-icon {
+    background: rgba(255,255,255,0.2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    animation: phonePulse 2s infinite;
+}
+
+@keyframes phonePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.sms-visual {
+    text-align: center;
+    color: white;
+}
+
+.sms-bubble {
+    background: rgba(255,255,255,0.2);
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.sms-text {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sms-subtitle {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.location-visual {
+    text-align: center;
+    color: white;
+}
+
+.map-pin {
+    background: rgba(255,255,255,0.2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50% 50% 50% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 0.5rem;
+    transform: rotate(-45deg);
+    animation: mapPinBounce 2s infinite;
+}
+
+.map-pin i {
+    transform: rotate(45deg);
+}
+
+.location-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+@keyframes mapPinBounce {
+    0%, 100% { transform: rotate(-45deg) translateY(0); }
+    50% { transform: rotate(-45deg) translateY(-10px); }
+}
+
+.social-visual, .document-visual, .audio-visual, 
+.video-visual, .menu-visual, .app-visual, .event-visual {
+    text-align: center;
+    color: white;
+}
+
+.social-icon, .doc-icon, .audio-icon, .video-icon, 
+.menu-icon, .app-icon, .event-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+.social-text, .doc-text, .audio-text, .video-text, 
+.menu-text, .app-text, .event-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Yeni görsel türleri için stiller */
+.images-visual, .business-visual, .app-visual, 
+.linklist-visual, .coupon-visual, .social-visual {
+    text-align: center;
+    color: white;
+}
+
+.images-icon, .business-icon, .app-icon, 
+.linklist-icon, .coupon-icon, .social-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+.images-text, .business-text, .app-text, 
+.linklist-text, .coupon-text, .social-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Kupon özel animasyonu */
+.coupon-visual .coupon-icon {
+    animation: couponPulse 2s infinite;
+}
+
+@keyframes couponPulse {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg); 
+    }
+    25% { 
+        transform: scale(1.1) rotate(-2deg); 
+    }
+    75% { 
+        transform: scale(1.1) rotate(2deg); 
+    }
+}
+
+/* Sosyal medya özel animasyonu */
+.social-visual .social-icon {
+    animation: socialBounce 3s ease-in-out infinite;
+}
+
+@keyframes socialBounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-5px) scale(1.05); }
+}
+
+/* Responsive Grid Enhancement */
+@media (max-width: 1200px) {
+    .needs-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .needs-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .need-visual {
+        height: 150px;
+    }
+    
+    .need-content {
+        padding: 1.5rem;
+    }
+}
