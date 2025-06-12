@@ -1,0 +1,16 @@
+﻿# Basit yönlendirme kuralı
+RewriteEngine On
+
+# Debug için geçici - backend erişimine izin ver
+# RewriteRule ^backend/ - [F,L]
+
+# Test rewrite
+RewriteRule ^test-rewrite$ test-target.php [L]
+
+# API routing
+RewriteRule ^api/(.*)$ index.php [QSA,L]
+
+# Normal routing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
